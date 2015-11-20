@@ -1,0 +1,16 @@
+{
+  "name": "fixate-shopify-boilerplate.dev",
+  "version": "0.0.0",
+  "authors": [
+    "Robert Crous <robert.crous21@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/site/templates/assets/vendor",
+    "test",
+    "tests"
+  ]
+}

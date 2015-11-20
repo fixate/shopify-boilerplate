@@ -1,0 +1,53 @@
+/*-------------------------------*\
+ * FUNCTIONS FOR ASSETS
+\*-------------------------------*/
+  @if $use-shopify {
+    // write mixin thats doing the asset url for me
+    $asset-base: "";
+    $icon-font-folder: "";
+    $alt-font-folder: "";
+    $base-font-folder: "";
+  }
+  @else {
+    $asset-base: '../../';
+    $icon-font-folder: "icon-font/";
+    $alt-font-folder: "Abril-fat-face/";
+    $base-font-folder: "Gandhi-Sans/";
+  }
+
+
+
+
+
+/*-------------------------------------------*\
+ * CALCULATE ASSETS PATH
+\*-------------------------------------------*/
+@function asset($last, $type:'image') {
+
+  @if $use-shopify {
+    // write mixin thats doing the asset url for me
+    @if ($type == 'font') { $asset-path: "#{$last}";}
+    @else if ($type == 'image') { $asset-path: "{{ #{$last} | asset_url }}";}
+  }
+  @else {
+    @if ($type == 'font') { $type-ext: 'fnt/';}
+    @else if ($type == 'image') { $type-ext: 'img/';}
+
+    $asset-path: "#{$asset-base}#{$type-ext}#{$last}";
+  }
+  @return "#{$asset-path}";
+}
+
+@mixin shopify-ff ($font-family, $font-filename, $weight: normal, $style: normal ) {
+  @font-face {
+    font-family: $font-family;
+    src: url('{{ "#{$font-filename}.eot" | asset_url }}');
+    src: url('{{ "#{$font-filename}.eot" | asset_url }}#iefix') format("embedded-opentype"),
+         url('{{ "#{$font-filename}.woff2" | asset_url }}') format("woff"),
+         url('{{ "#{$font-filename}.woff" | asset_url }}') format("woff"),
+         url('{{ "#{$font-filename}.ttf" | asset_url }}') format("truetype"),
+         url('{{ "#{$font-filename}.svg" | asset_url }}#timber-icons') format("svg");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}

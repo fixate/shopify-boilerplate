@@ -1,0 +1,33 @@
+{
+	"path": {
+		"db_backup": "database",
+		"dev": {
+			"assets": "unbuilt-assets/",
+			"img":    "unbuilt-assets/images/",
+			"fnt":    "unbuilt-assets/fnt/",
+			"scss":   "unbuilt-assets/css/scss/",
+      "js":     "unbuilt-assets/js/",
+      "coffee": "unbuilt-assets/js/coffee/"
+		},
+		"prod": {
+			"assets": "src/assets/"
+		}
+	},
+	"plumber": {
+		"errorHandler": false
+	},
+	"revManifest": {
+		"path": "src/site/templates/assets/rev-manifest.json",
+		"opts": {
+			"merge": true
+		}
+	},
+	"revReplace": {
+		"opts": {
+			"replaceInExtensions": [
+				".js",
+				".css"
+			]
+		}
+	}
+}

@@ -1,0 +1,21 @@
+{% comment %}
+  If customer accounts are enabled, provide login and create account links
+{% endcomment %}
+{% if shop.customer_accounts_enabled %}
+  <span>
+    {% if customer %}
+      {% if customer.first_name != blank %}
+        {% capture first_name %}<a href="/account">{{ customer.first_name }}</a>{% endcapture %}
+        {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }}
+      {% else %}
+        <a href="/account">{{ 'layout.customer.account' | t }}</a>
+      {% endif %}
+      | {{ 'layout.customer.log_out' | t | customer_logout_link }}
+    {% else %}
+      {{ 'layout.customer.log_in' | t | customer_login_link }}
+      {% if shop.customer_accounts_optional %}
+      | {{ 'layout.customer.create_account' | t | customer_register_link }}
+      {% endif %}
+    {% endif %}
+  </span>
+{% endif %}

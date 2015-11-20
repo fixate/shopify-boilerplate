@@ -1,0 +1,14 @@
+{% comment %}
+	http://docs.shopify.com/themes/liquid-variables/linklists
+{% endcomment %}
+
+<ul class="menu_-primary" id="menu">
+	{% for link in linklists.main-menu.links %}
+		{% comment %}
+			http://docs.shopify.com/manual/your-website/navigation/create-drop-down-menu
+		{% endcomment %}
+		<li class="menu__item {% if link.active %}menu__item_-current{% endif %}">
+			<a href="{{ link.url }}"><span>{{ link.title }}</span></a>
+		</li>
+	{% endfor %}
+</ul>
