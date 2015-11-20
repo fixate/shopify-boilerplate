@@ -1,0 +1,12 @@
+{% if settings.cart_notes_enable %}
+  <div class="gw">
+    <div class="g g-1/2">
+      <div class="field">
+        <label for="CartSpecialInstructions">{{ 'cart.general.note' | t }}</label>
+        <textarea name="note" class="input-full" id="CartSpecialInstructions">{{ cart.note }}</textarea>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<p><em>{{ 'cart.general.shipping_at_checkout' | t }}</em></p>

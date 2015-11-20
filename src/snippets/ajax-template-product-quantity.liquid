@@ -1,0 +1,21 @@
+<script id="JsQty" type="text/template">
+{% raw %}
+  <div class="js-qty">
+    <input type="text" class="js-qty__num" value="{{itemQty}}" min="1" data-id="{{id}}" aria-label="quantity" pattern="[0-9]*" name="{{inputName}}" id="{{inputId}}">
+    <div class="js-qty__btn-container">
+      <span class="js-qty__btn_-up">
+        <button type="button" class=" product__quantity js-qty__adjust js-qty__adjust--plus" data-id="{{id}}" data-qty="{{itemAdd}}">
+          <i>Add</i>
+        </button>
+      </span>
+
+      <span class="js-qty__btn_-down">
+        <button type="button" class=" product__quantity js-qty__adjust js-qty__adjust--minus" data-id="{{id}}" data-qty="{{itemMinus}}">
+          <i>Remove</i>
+        </button>
+      </span>
+    </div>
+
+  </div>
+{% endraw %}
+</script>

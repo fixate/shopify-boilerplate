@@ -1,0 +1,57 @@
+[
+	{
+		"name": "theme_inf",
+    "logo": "https:\/\/cdn.shopify.com\/s\/files\/1\/0070\/7032\/files\/2010_6_23_Shopify-Green_256x256.jpg",
+		"settings": [
+			{
+				"type": "header",
+				"content": "Fixate"
+			},
+			{
+				"type": "paragraph",
+				"content": "v2.1.0"
+			},
+			{
+				"type": "paragraph",
+				"content": "Theme settings allow designers to provide an easy way for any user to customize the look and feel of their shop without having to delve into HTML or CSS code. Please see our [help page on theme settings](http:\/\/docs.shopify.com\/themes\/theme-templates\/settings) to learn more about how you can make the theme customizable."
+			},
+			{
+				"type": "paragraph",
+				"content": "Review [Timber's documentation](http:\/\/shopify.github.io\/Timber\/) for any development help."
+			}
+		]
+	},
+
+	{
+		"name": "Cart Page",
+		"settings": [
+			{
+				"type": "checkbox",
+				"id": "cart_notes_enable",
+				"label": "Allow notes with orders"
+			},
+			{
+				"type": "checkbox",
+				"id": "cart_vendor_enable",
+				"label": "Show product vendor"
+			},
+			{
+				"type": "checkbox",
+				"id": "ajax_cart_enable",
+				"label": "Enable Ajax Cart Drawer",
+				"info": "[View Documentation](http:\/\/shopify.com\/timber#ajax-cart)"
+			}
+		]
+	},
+
+	{
+		"name": "SEO",
+		"settings": [
+			{
+				"type": "text",
+				"id": "google-webmaster",
+				"label": "Google Webmaster Tools"
+		 }
+		]
+	}
+]

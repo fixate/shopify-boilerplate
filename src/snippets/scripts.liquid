@@ -1,0 +1,36 @@
+{{ '//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js' | script_tag }}
+{{ 'fastclick.min.js' | asset_url | script_tag }}
+{{ 'timber.js' | asset_url | script_tag }}
+
+<script>
+  window.shopifyData = {
+    template: "{{ template }}",
+    moneyFormat: {{ shop.money_format | json }},
+    enableAjax: {{ settings.ajax_cart_enable }}
+  };
+
+  {% if newHash %}
+    $(function() {
+      timber.updateHash('{{ newHash }}');
+    });
+  {% endif %}
+
+  {% if resetPassword %}
+    $(function() {
+      timber.resetPasswordSuccess();
+    });
+  {% endif %}
+</script>
+
+{% comment %}
+  http://shopify.com/timber#ajax-cart
+{% endcomment %}
+{% if settings.ajax_cart_enable %}
+  {{ 'handlebars.min.js' | asset_url | script_tag }}
+  {% include 'ajax-templates' %}
+  {{ 'ajax-cart.js' | asset_url | script_tag }}
+{% endif %}
+
+{{ 'built.js' | asset_url | script_tag }}
+
+{% include 'currencies' %}

@@ -1,0 +1,20 @@
+<script id="AjaxQty" type="text/template">
+{% raw %}
+  <div class="ajaxcart__qty">
+    <div>
+      <div>
+        <input type="text" class="ajaxcart__qty-num" value="{{itemQty}}" min="0" data-id="{{id}}" aria-label="quantity" pattern="[0-9]*">
+      </div>
+      <div>
+        <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--plus icon-fallback-text" data-id="{{id}}" data-qty="{{itemAdd}}">
+          <i>Add</i>
+        </button>
+
+        <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty--minus icon-fallback-text" data-id="{{id}}" data-qty="{{itemMinus}}">
+          <i>Remove</i>
+        </button>
+      </div>
+    </div>
+  </div>
+{% endraw %}
+</script>

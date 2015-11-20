@@ -1,0 +1,12 @@
+---
+production:
+  theme_id:
+  access_token: 7e4901a85d64129f850ca757204cb429
+  store: fixate-shopify-boilerplate.myshopify.com
+development:
+  theme_id:
+  access_token: 7e4901a85d64129f850ca757204cb429
+  store: fixate-shopify-boilerplate.myshopify.com
+  refill_rate: 2
+  bucket_size: 40
+  concurrency: 4

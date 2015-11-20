@@ -1,0 +1,52 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.37
+4 verbose node symlink /usr/bin/node
+5 warn package.json promiselocks.co.za@0.0.0 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ '/home/rob/dev/sites/promise-locks.dev',
+7 verbose install   [ 'browser-sync',
+7 verbose install     'coffee-script',
+7 verbose install     'extend',
+7 verbose install     'gulp',
+7 verbose install     'gulp-cache',
+7 verbose install     'gulp-coffee',
+7 verbose install     'gulp-concat',
+7 verbose install     'gulp-exec',
+7 verbose install     'gulp-imagemin',
+7 verbose install     'gulp-minify-css',
+7 verbose install     'gulp-plumber',
+7 verbose install     'gulp-remember',
+7 verbose install     'gulp-rename',
+7 verbose install     'gulp-replace',
+7 verbose install     'gulp-rev',
+7 verbose install     'gulp-sass',
+7 verbose install     'gulp-shell',
+7 verbose install     'gulp-sourcemaps',
+7 verbose install     'gulp-uglify',
+7 verbose install     'gulp-util',
+7 verbose install     'gulp-watch',
+7 verbose install     'imagemin-pngquant',
+7 verbose install     'moment',
+7 verbose install     'npm-check-updates' ] ]
+8 info preinstall promiselocks.co.za@0.0.0
+9 verbose unsafe-perm in lifecycle true
+10 info promiselocks.co.za@0.0.0 Failed to exec preinstall script
+11 error promiselocks.co.za@0.0.0 preinstall: `npm install shelljs && node setup.js`
+11 error Exit status 1
+12 error Failed at the promiselocks.co.za@0.0.0 preinstall script.
+12 error This is most likely a problem with the promiselocks.co.za package,
+12 error not with npm itself.
+12 error Tell the author that this fails on your system:
+12 error     npm install shelljs && node setup.js
+12 error You can get their info via:
+12 error     npm owner ls promiselocks.co.za
+12 error There is likely additional logging output above.
+13 error System Linux 3.16.0-43-generic
+14 error command "/usr/bin/node" "/usr/bin/npm" "install"
+15 error cwd /home/rob/dev/sites/promise-locks.dev/src
+16 error node -v v0.10.37
+17 error npm -v 1.4.28
+18 error code ELIFECYCLE
+19 verbose exit [ 1, true ]

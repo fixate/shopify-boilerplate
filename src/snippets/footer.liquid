@@ -1,0 +1,7 @@
+<footer class="area-footer" role="contentinfo">
+	<div>
+		{% for link in linklists.footer.links %}
+			<a href="{{ link.url }}">{{ link.title }}</a>
+		{% endfor %}
+	</div>
+</footer>

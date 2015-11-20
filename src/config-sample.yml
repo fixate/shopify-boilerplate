@@ -1,0 +1,22 @@
+---
+# THEME GEM USAGE - visit https://github.com/Shopify/shopify_theme
+# Get your api_key and password at your-url.myshopify.com/admin/apps/private
+
+# example code
+production:
+  theme_id:
+  ## Use PASSWORD field from your App  ##
+  access_token: your-shop-password
+  store: your-shop.myshopify.com
+  ignore_files:
+    - config/settings_data.json
+development:
+  theme_id:
+  ## Use PASSWORD field from your App  ##
+  access_token: your-dev-shop-password
+  store: your-dev-shop.myshopify.com
+  refill_rate: 2
+  bucket_size: 40
+  concurrency: 4
+  ignore_files:
+    - config/settings_data.json
