@@ -33,3 +33,7 @@ All the ajax snippets also have default classes applied to them.
 
 This boilerplate uses https://github.com/fixate/fixate-fabricator as a styleguide.
 As such, the grid system is used on some templates/snippets in this boilerplate > [gw, g, g-1/1]
+
+### License
+
+MIT: http://fixate.mit-license.org/
